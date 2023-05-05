@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E21289E29FB0B1900ABE218 /* Serving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E21289D29FB0B1900ABE218 /* Serving.swift */; };
+		1E2128A029FB15B700ABE218 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E21289F29FB15B700ABE218 /* FileManager-DocumentsDirectory.swift */; };
+		1E2128A229FB160F00ABE218 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2128A129FB160F00ABE218 /* History.swift */; };
 		1E38A0A529F9D65600F45EFA /* MyDrinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38A0A429F9D65600F45EFA /* MyDrinkApp.swift */; };
 		1E38A0A729F9D65600F45EFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38A0A629F9D65600F45EFA /* ContentView.swift */; };
 		1E38A0A929F9D65700F45EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E38A0A829F9D65700F45EFA /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E21289D29FB0B1900ABE218 /* Serving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serving.swift; sourceTree = "<group>"; };
+		1E21289F29FB15B700ABE218 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
+		1E2128A129FB160F00ABE218 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		1E38A0A129F9D65600F45EFA /* MyDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E38A0A429F9D65600F45EFA /* MyDrinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrinkApp.swift; sourceTree = "<group>"; };
 		1E38A0A629F9D65600F45EFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +78,9 @@
 				1E38A0B629F9DC3400F45EFA /* Menu.swift */,
 				1E38A0B829F9DC6400F45EFA /* MenuSection.swift */,
 				1E38A0B229F9DBCF00F45EFA /* Drink.swift */,
+				1E21289D29FB0B1900ABE218 /* Serving.swift */,
+				1E21289F29FB15B700ABE218 /* FileManager-DocumentsDirectory.swift */,
+				1E2128A129FB160F00ABE218 /* History.swift */,
 				1E38A0BE29F9DCE400F45EFA /* ConfigurationOption.swift */,
 				1E38A0B429F9DBFB00F45EFA /* menu.json */,
 				1E38A0A829F9D65700F45EFA /* Assets.xcassets */,
@@ -162,11 +171,14 @@
 				1E38A0B929F9DC6400F45EFA /* MenuSection.swift in Sources */,
 				1E38A0BB29F9DC7B00F45EFA /* MenuView.swift in Sources */,
 				1E38A0A729F9D65600F45EFA /* ContentView.swift in Sources */,
+				1E2128A229FB160F00ABE218 /* History.swift in Sources */,
 				1E38A0B329F9DBCF00F45EFA /* Drink.swift in Sources */,
 				1E38A0B729F9DC3400F45EFA /* Menu.swift in Sources */,
 				1E38A0BF29F9DCE400F45EFA /* ConfigurationOption.swift in Sources */,
+				1E2128A029FB15B700ABE218 /* FileManager-DocumentsDirectory.swift in Sources */,
 				1E38A0BD29F9DCB300F45EFA /* CustomizeView.swift in Sources */,
 				1E38A0A529F9D65600F45EFA /* MyDrinkApp.swift in Sources */,
+				1E21289E29FB0B1900ABE218 /* Serving.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
