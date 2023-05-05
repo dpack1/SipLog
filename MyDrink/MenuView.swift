@@ -11,6 +11,7 @@ struct MenuView: View {
     
     @EnvironmentObject var menu: Menu
     @Environment (\.dismiss) var dismiss
+    @State private var searchText = ""
 
     
     let columns = [
@@ -23,7 +24,7 @@ struct MenuView: View {
                 LazyVGrid(columns: columns, pinnedViews: .sectionHeaders){
                     ForEach(menu.sections) { section in
                         Section {
-                            ForEach(section.drinks) { drink in
+                            ForEach(section.matches(for: searchText)) { drink in
                                 NavigationLink{
                                     CustomizeView(drink: drink){
                                         dismiss()
@@ -34,6 +35,7 @@ struct MenuView: View {
                                             .resizable()
                                             .scaledToFit()
                                             .cornerRadius(10)
+                                            .padding(6)
                                         
                                         Text(drink.name)
                                             .font(.system(.body,
@@ -56,6 +58,7 @@ struct MenuView: View {
                 .padding(.bottom)
             }
             .navigationTitle("Add Drink")
+            .searchable(text: $searchText)
         }
     }
 }

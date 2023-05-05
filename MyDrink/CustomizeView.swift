@@ -21,6 +21,8 @@ struct CustomizeView: View {
     @State private var milk = ConfigurationOption.none
     @State private var syrup = ConfigurationOption.none
     
+    @State private var isFirstAppearance = true
+    
     let sizeOptions = ["Small", "Medium", "Large"]
     
     var caffeine: Int {
@@ -97,6 +99,14 @@ struct CustomizeView: View {
                 
                 dismiss() //call my dismiss action and in MenuView it will dismiss itself
             }
+        }
+        .onAppear {
+            guard isFirstAppearance else { return }
+            if drink.servedWithMilk {
+                milk = menu.milkOptions[1]
+            }
+            
+            isFirstAppearance = false
         }
     }
 }
