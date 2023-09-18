@@ -22,6 +22,7 @@ struct ContentView: View {
     }
     
     var body: some View {
+        
             NavigationView {
                 List {
                     if history.servings.isEmpty {
@@ -71,7 +72,7 @@ struct ContentView: View {
                     }
                 }
                 .sheet(isPresented: $showingAddScreen, content: MenuView.init)
-                .navigationTitle("MyDrink")
+                .navigationTitle("SipLog")
                 .toolbar {
                     Button {
                         showingAddScreen = true
