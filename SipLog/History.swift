@@ -1,6 +1,6 @@
 //
 //  History.swift
-//  MyDrink
+//  SipLog
 //
 //  Created by Dylan Packham on 4/27/23.
 //

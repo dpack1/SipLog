@@ -1,6 +1,6 @@
 //
 //  SplashScreenView.swift
-//  MyDrink
+//  SipLog
 //
 //  Created by Dylan Packham on 9/18/23.
 //

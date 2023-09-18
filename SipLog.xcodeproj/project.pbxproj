@@ -28,7 +28,7 @@
 		1E21289D29FB0B1900ABE218 /* Serving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serving.swift; sourceTree = "<group>"; };
 		1E21289F29FB15B700ABE218 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		1E2128A129FB160F00ABE218 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
-		1E38A0A129F9D65600F45EFA /* MyDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E38A0A129F9D65600F45EFA /* SipLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SipLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E38A0A429F9D65600F45EFA /* MyDrinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrinkApp.swift; sourceTree = "<group>"; };
 		1E38A0A629F9D65600F45EFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1E38A0A829F9D65700F45EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		1E38A09829F9D65600F45EFA = {
 			isa = PBXGroup;
 			children = (
-				1E38A0A329F9D65600F45EFA /* MyDrink */,
+				1E38A0A329F9D65600F45EFA /* SipLog */,
 				1E38A0A229F9D65600F45EFA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,12 +65,12 @@
 		1E38A0A229F9D65600F45EFA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E38A0A129F9D65600F45EFA /* MyDrink.app */,
+				1E38A0A129F9D65600F45EFA /* SipLog.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1E38A0A329F9D65600F45EFA /* MyDrink */ = {
+		1E38A0A329F9D65600F45EFA /* SipLog */ = {
 			isa = PBXGroup;
 			children = (
 				1E38A0A429F9D65600F45EFA /* MyDrinkApp.swift */,
@@ -89,7 +89,7 @@
 				1E38A0AA29F9D65700F45EFA /* Preview Content */,
 				1E6D1AB52AB8D4EC003D8CEF /* SplashScreenView.swift */,
 			);
-			path = MyDrink;
+			path = SipLog;
 			sourceTree = "<group>";
 		};
 		1E38A0AA29F9D65700F45EFA /* Preview Content */ = {
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1E38A0A029F9D65600F45EFA /* MyDrink */ = {
+		1E38A0A029F9D65600F45EFA /* SipLog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E38A0AF29F9D65700F45EFA /* Build configuration list for PBXNativeTarget "MyDrink" */;
+			buildConfigurationList = 1E38A0AF29F9D65700F45EFA /* Build configuration list for PBXNativeTarget "SipLog" */;
 			buildPhases = (
 				1E38A09D29F9D65600F45EFA /* Sources */,
 				1E38A09E29F9D65600F45EFA /* Frameworks */,
@@ -115,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = MyDrink;
+			name = SipLog;
 			productName = MyDrink;
-			productReference = 1E38A0A129F9D65600F45EFA /* MyDrink.app */;
+			productReference = 1E38A0A129F9D65600F45EFA /* SipLog.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -135,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1E38A09C29F9D65600F45EFA /* Build configuration list for PBXProject "MyDrink" */;
+			buildConfigurationList = 1E38A09C29F9D65600F45EFA /* Build configuration list for PBXProject "SipLog" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -148,7 +148,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1E38A0A029F9D65600F45EFA /* MyDrink */,
+				1E38A0A029F9D65600F45EFA /* SipLog */,
 			);
 		};
 /* End PBXProject section */
@@ -310,7 +310,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MyDrink/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SipLog/Preview Content\"";
 				DEVELOPMENT_TEAM = WGY6M7QSD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -324,7 +324,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dylanattempts.MyDrink;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylanattempts.SipLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MyDrink/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SipLog/Preview Content\"";
 				DEVELOPMENT_TEAM = WGY6M7QSD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -353,7 +353,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dylanattempts.MyDrink;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylanattempts.SipLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -364,7 +364,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E38A09C29F9D65600F45EFA /* Build configuration list for PBXProject "MyDrink" */ = {
+		1E38A09C29F9D65600F45EFA /* Build configuration list for PBXProject "SipLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E38A0AD29F9D65700F45EFA /* Debug */,
@@ -373,7 +373,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E38A0AF29F9D65700F45EFA /* Build configuration list for PBXNativeTarget "MyDrink" */ = {
+		1E38A0AF29F9D65700F45EFA /* Build configuration list for PBXNativeTarget "SipLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E38A0B029F9D65700F45EFA /* Debug */,

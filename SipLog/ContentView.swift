@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  MyDrink
+//  SipLog
 //
 //  Created by Dylan Packham on 4/26/23.
 //
