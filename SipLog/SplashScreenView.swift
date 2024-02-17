@@ -20,7 +20,7 @@ struct SplashScreenView: View {
         }
         else {
             ZStack {
-                Color.orange
+                Color(.systemBackground)
                     .ignoresSafeArea()
                 VStack {
                     VStack {
@@ -45,7 +45,7 @@ struct SplashScreenView: View {
                         
                         Text("SipLog")
                             .font(Font.custom("HelveticaNeue", size: 72))
-                            .foregroundColor(colorScheme == .dark ?.white.opacity(0.80) : .white)
+                            .foregroundColor(.red)
                         
                         Spacer()
                     }
