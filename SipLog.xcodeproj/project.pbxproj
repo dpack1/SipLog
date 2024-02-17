@@ -22,6 +22,7 @@
 		1E38A0BD29F9DCB300F45EFA /* CustomizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38A0BC29F9DCB300F45EFA /* CustomizeView.swift */; };
 		1E38A0BF29F9DCE400F45EFA /* ConfigurationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38A0BE29F9DCE400F45EFA /* ConfigurationOption.swift */; };
 		1E6D1AB62AB8D4EC003D8CEF /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D1AB52AB8D4EC003D8CEF /* SplashScreenView.swift */; };
+		1EFD9BE42B803838007B832F /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9BE32B803838007B832F /* DonutChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		1E38A0BC29F9DCB300F45EFA /* CustomizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeView.swift; sourceTree = "<group>"; };
 		1E38A0BE29F9DCE400F45EFA /* ConfigurationOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationOption.swift; sourceTree = "<group>"; };
 		1E6D1AB52AB8D4EC003D8CEF /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		1EFD9BE32B803838007B832F /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			children = (
 				1E38A0A429F9D65600F45EFA /* MyDrinkApp.swift */,
 				1E38A0A629F9D65600F45EFA /* ContentView.swift */,
+				1EFD9BE32B803838007B832F /* DonutChart.swift */,
 				1E38A0BA29F9DC7B00F45EFA /* MenuView.swift */,
 				1E38A0BC29F9DCB300F45EFA /* CustomizeView.swift */,
 				1E38A0B629F9DC3400F45EFA /* Menu.swift */,
@@ -178,6 +181,7 @@
 				1E38A0B329F9DBCF00F45EFA /* Drink.swift in Sources */,
 				1E38A0B729F9DC3400F45EFA /* Menu.swift in Sources */,
 				1E38A0BF29F9DCE400F45EFA /* ConfigurationOption.swift in Sources */,
+				1EFD9BE42B803838007B832F /* DonutChart.swift in Sources */,
 				1E2128A029FB15B700ABE218 /* FileManager-DocumentsDirectory.swift in Sources */,
 				1E38A0BD29F9DCB300F45EFA /* CustomizeView.swift in Sources */,
 				1E38A0A529F9D65600F45EFA /* MyDrinkApp.swift in Sources */,
