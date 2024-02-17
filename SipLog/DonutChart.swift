@@ -27,7 +27,7 @@ struct DonutChart: View {
 
             Circle()
                 .trim(from: 0, to: CGFloat(min(animatedProgress, 1.0)))
-                .stroke(Color.red, style: StrokeStyle(lineWidth: 20, lineCap: .square))
+                .stroke(Color("companyRed"), style: StrokeStyle(lineWidth: 20, lineCap: .square))
                 .rotationEffect(Angle(degrees: 220))
                 .onAppear {
                     withAnimation(.easeInOut(duration: animationDuration)) {

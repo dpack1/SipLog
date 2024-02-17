@@ -31,7 +31,7 @@ struct ContentView: View {
                         
                         Text("SipLog")
                             .font(Font.custom("HelveticaNeue", size: 40))
-                            .foregroundStyle(Color(.red))
+                            .foregroundStyle(Color("companyRed"))
                         Spacer()
                     }
                     HStack {

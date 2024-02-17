@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="218.068" height="255.714" viewBox="0 0 218.068 255.714">
+  <defs>
+    <filter id="Path_18" x="0" y="2.997" width="218.068" height="252.716" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Large_Cup" data-name="Large Cup" transform="translate(12.062)">
+    <g transform="matrix(1, 0, 0, 1, -12.06, 0)" filter="url(#Path_18)">
+      <path id="Path_18-2" data-name="Path 18" d="M0,0,33.373,197l84.708-1.612L148,7.037Z" transform="matrix(0.97, -0.26, 0.26, 0.97, 12.06, 50.36)" fill="#fff" stroke="#e3e3e3" stroke-linejoin="round" stroke-width="5"/>
+    </g>
+    <path id="Path_15" data-name="Path 15" d="M0,0,32.922,195.778l83.563-1.6L146,6.993Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 1.037, 50.763)" fill="#fff" stroke="#bcd6e0" stroke-linejoin="round" stroke-width="5"/>
+    <path id="Path_17" data-name="Path 17" d="M0,0H13.632V192.28H0Z" transform="matrix(0.891, -0.454, 0.454, 0.891, 3.808, 6.189)" fill="#919191"/>
+    <g id="Ellipse_17" data-name="Ellipse 17" transform="matrix(0.985, -0.174, 0.174, 0.985, 90.021, 9.288)" fill="#fff" stroke="#d80000" stroke-width="3">
+      <circle cx="18" cy="18" r="18" stroke="none"/>
+      <circle cx="18" cy="18" r="16.5" fill="none"/>
+    </g>
+    <path id="Path_16" data-name="Path 16" d="M-.039-9.182,24.052,150.85l63.506-1.666L108.2,23.362Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 26.955, 71.966)" fill="#d80000"/>
+    <g id="Ellipse_15" data-name="Ellipse 15" transform="matrix(0.985, -0.174, 0.174, 0.985, 90.021, 69.804)" fill="#fff" stroke="#d80000" stroke-width="3">
+      <circle cx="12" cy="12" r="12" stroke="none"/>
+      <circle cx="12" cy="12" r="10.5" fill="none"/>
+    </g>
+    <g id="Ellipse_16" data-name="Ellipse 16" transform="matrix(0.985, -0.174, 0.174, 0.985, 62.219, 41.001)" fill="#fff" stroke="#d80000" stroke-width="3">
+      <circle cx="12" cy="12" r="12" stroke="none"/>
+      <circle cx="12" cy="12" r="10.5" fill="none"/>
+    </g>
+  </g>
+</svg>
