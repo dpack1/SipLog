@@ -23,6 +23,8 @@
 		1E38A0BF29F9DCE400F45EFA /* ConfigurationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38A0BE29F9DCE400F45EFA /* ConfigurationOption.swift */; };
 		1E47702F2B8153CE0075D106 /* DrinkIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E47702E2B8153CE0075D106 /* DrinkIcon.swift */; };
 		1E6D1AB62AB8D4EC003D8CEF /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D1AB52AB8D4EC003D8CEF /* SplashScreenView.swift */; };
+		1EC561762B9F9C8100691B81 /* CalorieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC561752B9F9C8100691B81 /* CalorieChart.swift */; };
+		1EDEA7052B9FA0D4009C7FFE /* BubblesAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEA7042B9FA0D4009C7FFE /* BubblesAnimationView.swift */; };
 		1EFD9BE42B803838007B832F /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9BE32B803838007B832F /* DonutChart.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		1E38A0BE29F9DCE400F45EFA /* ConfigurationOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationOption.swift; sourceTree = "<group>"; };
 		1E47702E2B8153CE0075D106 /* DrinkIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkIcon.swift; sourceTree = "<group>"; };
 		1E6D1AB52AB8D4EC003D8CEF /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		1EC561752B9F9C8100691B81 /* CalorieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieChart.swift; sourceTree = "<group>"; };
+		1EDEA7042B9FA0D4009C7FFE /* BubblesAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesAnimationView.swift; sourceTree = "<group>"; };
 		1EFD9BE32B803838007B832F /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +65,7 @@
 		1E38A09829F9D65600F45EFA = {
 			isa = PBXGroup;
 			children = (
+				1EDEA7042B9FA0D4009C7FFE /* BubblesAnimationView.swift */,
 				1E38A0A329F9D65600F45EFA /* SipLog */,
 				1E38A0A229F9D65600F45EFA /* Products */,
 			);
@@ -80,6 +85,7 @@
 				1E38A0A429F9D65600F45EFA /* MyDrinkApp.swift */,
 				1E38A0A629F9D65600F45EFA /* ContentView.swift */,
 				1EFD9BE32B803838007B832F /* DonutChart.swift */,
+				1EC561752B9F9C8100691B81 /* CalorieChart.swift */,
 				1E47702E2B8153CE0075D106 /* DrinkIcon.swift */,
 				1E38A0BA29F9DC7B00F45EFA /* MenuView.swift */,
 				1E38A0BC29F9DCB300F45EFA /* CustomizeView.swift */,
@@ -184,9 +190,11 @@
 				1E38A0B329F9DBCF00F45EFA /* Drink.swift in Sources */,
 				1E47702F2B8153CE0075D106 /* DrinkIcon.swift in Sources */,
 				1E38A0B729F9DC3400F45EFA /* Menu.swift in Sources */,
+				1EC561762B9F9C8100691B81 /* CalorieChart.swift in Sources */,
 				1E38A0BF29F9DCE400F45EFA /* ConfigurationOption.swift in Sources */,
 				1EFD9BE42B803838007B832F /* DonutChart.swift in Sources */,
 				1E2128A029FB15B700ABE218 /* FileManager-DocumentsDirectory.swift in Sources */,
+				1EDEA7052B9FA0D4009C7FFE /* BubblesAnimationView.swift in Sources */,
 				1E38A0BD29F9DCB300F45EFA /* CustomizeView.swift in Sources */,
 				1E38A0A529F9D65600F45EFA /* MyDrinkApp.swift in Sources */,
 				1E21289E29FB0B1900ABE218 /* Serving.swift in Sources */,

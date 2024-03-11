@@ -14,31 +14,25 @@ struct SplashScreenView: View {
     @State private var opacity = 0.5
     
     var body: some View {
-        
         if isActive  {
             ContentView()
-        }
-        else {
+        } else {
             ZStack {
                 Color(.systemBackground)
                     .ignoresSafeArea()
+                
                 VStack {
                     VStack {
-                            Circle()
-                                .frame(width: 236 , height: 236)
-                                .foregroundColor(Color("strawColor"))
-                                .padding(.top, 100)
-                                .overlay {
-                                    Image("SplashLogo")
-                                        .padding(.top, 20 )
-                                        .padding(.trailing, 20)
-                                        .shadow(radius: 5, x: 2, y: 3)
-
-                                }
-
-
-
-
+                        Circle()
+                            .frame(width: 236, height: 236)
+                            .foregroundColor(Color("strawColor"))
+                            .padding(.top, 100)
+                            .overlay {
+                                Image("SplashLogo")
+                                    .padding(.top, 20)
+                                    .padding(.trailing, 20)
+                                    .shadow(radius: 5, x: 2, y: 3)
+                            }
                         
                         Text("SipLog")
                             .font(Font.custom("HelveticaNeue", size: 72))
@@ -50,29 +44,29 @@ struct SplashScreenView: View {
                     .opacity(opacity)
                     .onAppear {
                         withAnimation(.smooth(extraBounce: 0.5)) {
-                            
                             self.size = 0.9
                             self.opacity = 1.0
                         }
+                        // Delay transition to the next screen
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                            withAnimation {
+                                self.isActive = true
+                            }
+                        }
                     }
                 }
-                
-        }
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                    withAnimation {
-                        self.isActive = true
-                    }
-                }
+            }
+            .overlay {
+                // Include BubblesAnimationView here
+                BubblesAnimationView(numberOfBubbles: 30)
             }
         }
     }
 }
+
 
 struct SplashScreenView_Previews: PreviewProvider {
     static var previews: some View {
         SplashScreenView()
     }
 }
-
-

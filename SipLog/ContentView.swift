@@ -13,6 +13,17 @@ struct ContentView: View {
     @StateObject var history = History()
     @State private var showingAddScreen = false
     
+    @State private var animatedProgress: Double = 0
+    @State private var animatedLabel: Double = 0
+    var goal: Int = 500
+    let animationDuration = 2.0
+    
+    
+    
+    private var progress: Double {
+        return Double(totalCalories) / Double(goal)
+    }
+    
     var totalCaffeine: Int {
         history.servings.map(\.caffeine).reduce(0, +)
     }
@@ -22,32 +33,34 @@ struct ContentView: View {
     }
     
     var body: some View {
-        
-        VStack {
+        NavigationStack{
             
-            HStack {
-                VStack {
-                    HStack {
-                        
-                        Text("SipLog")
-                            .font(Font.custom("HelveticaNeue", size: 40))
-                            .foregroundStyle(Color("companyRed"))
-                        Spacer()
-                    }
-                    HStack {
-                        Text(currentWeekString())
-                            .font(Font.custom("HelveticaNeue", size: 20))
-
-                        Spacer()
-                    }
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            VStack {
                 
-                Spacer()
-                
+                HStack {
+                    VStack {
+                        HStack {
+                            
+                            Text("SipLog")
+                                .font(Font.custom("HelveticaNeue", size: 40))
+                                .foregroundStyle(Color("companyRed"))
+                            Spacer()
+                        }
+                        HStack {
+                            Text(currentWeekString())
+                                .font(Font.custom("HelveticaNeue", size: 20))
+                            
+                            Spacer()
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Spacer()
+                    
                     VStack {
                         // Your other content here
-                        NavigationLink(destination: MenuView()) {
+                        NavigationLink(destination: MenuView().environmentObject(Menu())) {
                             RoundedRectangle(cornerRadius: 5)
                                 .stroke(lineWidth: 1)
                                 .frame(width: 75, height: 32)
@@ -64,84 +77,91 @@ struct ContentView: View {
                                 }
                         }
                     }
-
-
-            }
-            .padding(.leading)
-
-//            DonutChart(progress: Double(totalCaffeine) / 100.0)
-            DonutChart(achieved: 375, goal: 500)
-                .frame(width: 143, height: 143)
-                .padding()
-            
-            
-            NavigationView {
+                    
+                    
+                }
+                .padding(.leading)
+                
+                HStack {
+                    CalorieChart(achieved: totalCalories, goal: 500, color: "companyRed", lineWidth: 18)
+                        .frame(width: 143, height: 143)
+                        .padding()
+                }
+                
+                
                 List {
-//                    if history.servings.isEmpty {
-//                        Button("Add your first drink!") {
-//                            showingAddScreen = true
-//                        }
-//                    } else {
+                    Section("Weekly Summary") {
+                        Text("Caffeine: \(totalCaffeine)mg")
+                            .font(Font.custom("HelveticaNeue", size: 16))
                         
-                        Section("Summary") {
-                            Text("Caffeine: \(totalCaffeine)mg")
-                            Text("Calories: \(totalCalories)")
-                        }
-                        ForEach(history.servings) {serving in
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text(serving.name)
-                                        .font(.headline)
-                                    
-                                    Text(serving.description)
-                                        .font(.caption)
-                                }
-                                
-                                Spacer()
-                                
-                                Text ("\(serving.caffeine)mg")
-                            }
-                            .swipeActions {
-                                
-                                Button(role: .destructive) {
-                                    withAnimation {
-                                        history.delete(serving)
-                                    }
-                                } label: {
-                                    Label("Delete", systemImage: "trash")
-                                }
-                                
-                                Button {
-                                    withAnimation {
-                                        history.reorder(serving)
-                                    }
-                                } label: {
-                                    Label("Repeat", systemImage:"repeat")
-                                }
-                                .tint(.blue)
-                            }
-                        }
-//                    }
-                }
-                .sheet(isPresented: $showingAddScreen, content: MenuView.init)
-                .toolbar {
-                    Button {
-                        showingAddScreen = true
-                    } label: {
-                        Label("Add New Drink", systemImage: "plus")
+                        Text("Calories: \(totalCalories)")
+                            .font(Font.custom("HelveticaNeue", size: 16))
+                        
                     }
+                    .font(Font.custom("HelveticaNeue", size: 12))
+                    .foregroundStyle(.black)
+                    .listRowBackground(Color("Light Gray"))
+                    
+                    
+                    Section("Entries") {
+                        if history.servings.isEmpty {
+                            Button("Add your first drink!") {
+                                showingAddScreen = true
+                            }
+                        } else {
+                            
+                            ForEach(history.servings) { serving in
+                                HStack {
+                                    VStack(alignment: .leading) {
+                                        Text(serving.name)
+                                            .font(Font.custom("HelveticaNeue", size: 16))
+                                        
+                                        
+                                        Text(serving.description)
+                                            .font(Font.custom("HelveticaNeue", size: 12))
+                                    }
+                                    
+                                    Spacer()
+                                    
+                                    Text ("\(serving.caffeine)mg")
+                                }
+                                .swipeActions {
+                                    
+                                    Button(role: .destructive) {
+                                        withAnimation {
+                                            history.delete(serving)
+                                        }
+                                    } label: {
+                                        Label("Delete", systemImage: "trash")
+                                    }
+                                    
+                                    Button {
+                                        withAnimation {
+                                            history.reorder(serving)
+                                        }
+                                    } label: {
+                                        Label("Repeat", systemImage:"doc.on.doc")
+                                    }
+                                    .tint(.blue)
+                                }
+                            }
+                        }
+                    }
+                    .font(Font.custom("HelveticaNeue", size: 12))
+                    .foregroundStyle(.black)
+                    .listRowBackground(Color("Light Gray"))
                 }
+                .scrollContentBackground(.hidden)
             }
-            .environmentObject(menu)
-            .environmentObject(history)
-            .padding()
         }
+        .environmentObject(menu)
+        .environmentObject(history)
     }
     
     private func currentWeekString() -> String {
         let calendar = Calendar.current
         let today = Date()
-
+        
         if let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: today)),
            let endOfWeek = calendar.date(byAdding: .day, value: 6, to: startOfWeek) {
             let dateFormatter = DateFormatter()
@@ -149,12 +169,12 @@ struct ContentView: View {
             var currentWeek = dateFormatter.string(from: startOfWeek).trimmingCharacters(in: .whitespacesAndNewlines)
             dateFormatter.dateFormat = " MMMM dd"
             currentWeek += dateFormatter.string(from: endOfWeek).trimmingCharacters(in: .punctuationCharacters)
-
+            
             return currentWeek
         }
         return "Unknown Week"
     }
-
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
