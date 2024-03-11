@@ -49,16 +49,17 @@ struct ContentView: View {
                         // Your other content here
                         NavigationLink(destination: MenuView()) {
                             RoundedRectangle(cornerRadius: 5)
+                                .stroke(lineWidth: 1)
                                 .frame(width: 75, height: 32)
-                                .foregroundColor(Color("textColor").opacity(0.3))
+                                .foregroundColor(Color("companyGray").opacity(0.3))
                                 .padding()
                                 .overlay {
                                     HStack (spacing: 0){
-                                        DrinkIcon()
-                                            .padding([.leading, .top], 5)
+                                        Image("MiniSplashLogo")
+                                            .frame(width: 20)
                                         Text("Log + ")
                                             .font(Font.custom("HelveticaNeue", size: 16))
-                                            .foregroundStyle(Color("textColor").opacity(0.6))
+                                            .foregroundStyle(Color(.black))
                                     }
                                 }
                         }
@@ -76,11 +77,11 @@ struct ContentView: View {
             
             NavigationView {
                 List {
-                    if history.servings.isEmpty {
-                        Button("Add your first drink!") {
-                            showingAddScreen = true
-                        }
-                    } else {
+//                    if history.servings.isEmpty {
+//                        Button("Add your first drink!") {
+//                            showingAddScreen = true
+//                        }
+//                    } else {
                         
                         Section("Summary") {
                             Text("Caffeine: \(totalCaffeine)mg")
@@ -120,7 +121,7 @@ struct ContentView: View {
                                 .tint(.blue)
                             }
                         }
-                    }
+//                    }
                 }
                 .sheet(isPresented: $showingAddScreen, content: MenuView.init)
                 .toolbar {
